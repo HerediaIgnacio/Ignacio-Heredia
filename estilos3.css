@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+
+    background-image: "img/robot.jpg";
+    background-size: 200%;
+    animation: movimiento2 45s infinite linear alternate;
+    opacity: 100%;
+    visibility: visible;
+}
+
+.centrado{
+    text-align: center;
+}
+.negritacursiva{
+    font-weight: bold;
+    text-align: center
+}
+
+.pfooter{
+    padding: 15px 10px 0px 0px;
+}
+.contenedor{
+   
+
+    /*width: 100%;*/
+    background: rgb(131, 129, 129);
+    
+    background-size: 200%;
+    animation: movimiento2 45s infinite linear alternate;
+    
+    /*justify-content: center;
+    align-items: center;*/
+
+   padding-top: 100px;
+    /*padding-bottom: 100px;*/
+    /*height: 100vh;*/
+    /*height: 100%;*/
+    
+   /*position: relative;*/
+    height: 900px;
+    background-image: url("https://storage.googleapis.com/site.esss.co/221f1801-thumb.jpg");
+  
+   /* padding-bottom: 500px;*/
+       
+    overflow:hidden;
+
+}
+
+
+
+@keyframes movimiento2{
+
+    from{
+        background-position: bottom left;
+    }
+
+    to{
+
+        background-position: top right ;
+      }   
+}
+
+
+.contenedor figure{
+    
+    position:absolute;
+    margin-left: 10%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+
+    height: 80%;
+    cursor: pointer;
+    
+    width: 80%;
+
+    overflow: hidden;
+   
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+}
+.contenedor figure img{
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    transition: all 400ms ease-out;
+    will-change: transform;
+    padding: 0px;
+
+   
+}
+.contenedor figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,103,123,0.7);
+    transition: all 400ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+.contenedor figure:hover > .capa {
+    opacity: 1;
+    visibility: visible;
+}
+.contenedor figure:hover > .capa h3{
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+.contenedor figure:hover > img{ 
+     transform: scale(1.3); 
+} 
+.contenedor figure .capa h3{
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 120px;
+    transition: all 400ms ease-out;
+     margin-top: 30px;
+}
+.contenedor figure .capa p{
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+}
+
+header     
+{ 
+ width: 100%;
+ height: 150px;
+ box-shadow: 1px 1px 2px #000; 
+ position: fixed;                   /* deja fijo al menu*/
+ }
+
+ /* Video */
+
+ .tituloVideo{
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: transparent;
+    
+ }
+
+ .video{
+   position: relative;
+   padding-top: 50px;
+   padding-bottom: 100px;
+   padding-left: 20PX;
+   align-items: center;
+   align-content: center;
+   background-color: rgb(121, 130, 147);
+   background-image: url("img/ciberfisico.jpg");
+   animation: movimiento3 120s infinite linear alternate;
+  }
+
+  .videoFrame
+  {
+    align-content: center;
+    align-items: center;
+    /*padding-left: 20px;*/
+    margin-left: 0px;
+
+  }
+
+  @keyframes movimiento3{
+
+    from{
+        background-position: left;
+    }
+
+    to{
+
+        background-position: right ;
+      }   
+    }
+
+/*Aquí debajo va el FOOTER*/
+
+footer{
+    
+
+    width: 100%;
+    padding: 50px 0px;
+    background-image: url("img/background-footer.svg");
+    background-color: rgb(191, 197, 209);
+   /*background-size: cover;*/
+    /*background-image:url("img/robot.jpg");*/
+
+    background-color: #1f1f88;
+   -webkit-mask-image: url("img/background-footer.svg");
+    mask-image: url("img/background-footer.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+
+
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+}
+
+.container__footer{
+   display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+
+}
+
+.box__footer{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.box__footer .logo2 img{
+    width: 100px;
+    margin-left: 25%;
+
+}
+
+.box__footer .terms{
+    max-width: 350px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: #7a7a7a;
+    font-size: 18px;
+    align-items: center;
+    align-content: center;
+}
+
+.box__footer h2{
+    margin-bottom: 30px;
+    color: #343434;
+    font-weight: 700;
+}
+
+.box__footer a{
+    margin-top: 10px;
+    color: #7a7a7a;
+    font-weight: 600;
+}
+
+.box__footer a:hover{
+    opacity: 0.8;
+}
+
+.box__footer a .fab{
+    font-size: 20px;
+}
+
+.box__copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+
+.box__copyright p{
+    margin-top: 20px;
+    color: #7a7a7a;
+}
+
+.box__copyright hr{
+    border: none;
+    height: 1px;
+    background-color: #7a7a7a;
+}
+

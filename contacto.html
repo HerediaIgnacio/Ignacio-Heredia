@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/faviconnn.ico">
+    <link rel="stylesheet" href="contacto.css">
+    <link rel="stylesheet" href="estilos-contacto.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+    <title>Industria 4.0</title>
+        
+</head>
+<body>
+    <header class="menusC">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <a href="#" class="enlace">
+                <img src="img/faviconnn.png" alt="" class="logo">
+            </a>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="introduccion.html">INDUSTRIA 4.0</a></li>
+                <li><a href="historia.html">HISTORIA</a></li>
+                <li><a href="tecnologias.html">TECNOLOGIAS</a></li>
+                <li><a class="active" href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+      <div class="titulo">
+        <h2 class="text-center">Contacto</h2>
+      </div>
+        <div class="formulario">
+        <form action="" name="formulario" method="post">
+            <fieldset>
+                <legend>Tus Datos</legend>
+                
+                <div class="campo">
+                    <label for="nombre">Nombre: </label>
+                    <input  type="text" name="nombre" id="nombre" maxlength="30" placeholder="Tu Nombre">
+                </div>
+                
+                <div class="campo">
+                    <label for="apellido">Apellido: </label>
+                    <input  type="text" name="apellido" id="apellido" maxlength="30" placeholder="Tu Apellido">
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="Tu Email">
+                </div>
+
+                <div class="campo">
+                    <label for="tel">Teléfono:</label>
+                    <input type="tel" name="tel" id="tel" placeholder="Tu Teléfono" >
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="mensaje" id="mensaje" rows="10" cols="20"></textarea>
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>País</legend>
+
+                <div class="campo">
+                    <label for="pais">País</label>
+                    <select name="pais" id="pais">
+                        <option value="">-- Seleccione -- </option>
+                        <option value="MX">México</option>
+                        <option value="PR">Perú</option>
+                        <option value="CO">Colombia</option>
+                        <option value="AR">Argentina</option>
+                        <option value="ES">Ecuador</option>
+                        <option value="CL">Chile</option>
+                        <option value="CL">Otros</option>
+                    </select>
+
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Información Extra</legend>
+
+                <div class="campo">
+                    <label for="categoria">Categoría de Interés</label>
+                    <select name="categoria" id="categoria">
+                        <option value="">-- Seleccione -- </option>
+                        <option value="RB">Robots</option>
+                        <option value="GD">Gemelos Digitales</option>
+                        <option value="SI">Sistemas de Integración</option>
+                        <option value="IOT">IOT</option>
+                        <option value="CC">Cloud Computing</option>
+                        <option value="RA-RV">Realidad Aumentada y Realidad Virtual</option>
+                        <option value="IA">Inteligencia Artificial</option>
+                        <option value="BD">Big Data</option>
+                        <option value="SB">Sistemas Ciberfísicos</option>
+                        <option value="CIBER">Ciberseguridad</option>
+                        <option value="FA">Fabricación Aditiva</option>
+                    </select>
+                </div>
+
+            </fieldset>
+
+            <input class="btn" type="submit" id="btn1" value="Enviar Formulario" >
+        </form>
+    </div>
+        <script>
+            var formulario = document.getElementsByName('formulario')[0],  //[0] Primer elemento, el formulario en si mismo.
+        elementos = formulario.elements, // Elementos del form, no lo usamos en este script.
+        boton = document.getElementById('btn1') // El botón
+
+        // --------------------------------------------------------
+        // Validamos Nombre
+        // --------------------------------------------------------
+        var validarNombre = function (e) {
+            if (formulario.nombre.value == 0) { // Si el campo id="nombre" del form está vacio...
+                alert("Completa el campo nombre")
+                e.preventDefault() // Evita el comportamiento por defecto
+                //https://www.w3schools.com/jsref/event_preventdefault.asp
+            }
+        }
+
+        // --------------------------------------------------------
+        // Validamos Apellido
+        // --------------------------------------------------------
+        var validarApellido = function (e) {
+            if (formulario.apellido.value == 0) { // Si el campo id="apellido" del form está vacio...
+                alert("Completa el campo apellido")
+                e.preventDefault() // Evita el comportamiento por defecto
+                //https://www.w3schools.com/jsref/event_preventdefault.asp
+            }
+        }
+
+        // --------------------------------------------------------
+        // Validamos Mail
+        // --------------------------------------------------------
+        var validarMail = function (e) {
+            if (formulario.email.value == 0) { // Si el campo id="email" del form está vacio...
+                alert("Completa el campo e-mail")
+                e.preventDefault() // Evita el comportamiento por defecto
+                //https://www.w3schools.com/jsref/event_preventdefault.asp
+            }
+        }
+
+        // --------------------------------------------------------
+        // Validamos Teléfono
+        // --------------------------------------------------------
+        var validarTelefono = function (e) {
+            if (formulario.tel.value == 0) { // Si el campo id="tel" del form está vacio...
+                alert("Completa el campo teléfono")
+                e.preventDefault() // Evita el comportamiento por defecto
+                //https://www.w3schools.com/jsref/event_preventdefault.asp
+            }
+        }
+
+        // --------------------------------------------------------
+        // Validamos País
+        // --------------------------------------------------------
+        var validarPais = function (e) {
+            if (document.formulario.pais.selectedIndex == 0) {
+                alert("Por favor elija su país.")
+                document.formulario.pais.focus()
+                return 0
+            }
+        }
+
+        // --------------------------------------------------------
+        // Validamos Categoría de Interés
+        // --------------------------------------------------------
+        var validarCategoria = function (e) {
+            if (document.formulario.categoria.selectedIndex == 0) {
+                alert("Por favor elija una categoría de interés.")
+                document.formulario.categoria.focus()
+                return 0
+            }
+        }
+
+
+
+        // --------------------------------------------------------
+        // Se ejecuta al presionar submit e invoca a las tres validaciones
+        // --------------------------------------------------------
+        var validar = function (e) {  // "e" es el evento recibido del form (https://developer.mozilla.org/es/docs/Web/API/Event/preventDefault)
+            validarNombre(e)
+            validarApellido(e)
+            validarMail(e)
+            validarTelefono(e)
+            validarPais(e)
+            validarCategoria(e)
+        }
+
+        // --------------------------------------------------------
+        // Espera que se presione "enviar" y llama a "validar"
+        // submit es un evento DEL FORM, no del botón!
+        formulario.addEventListener("submit", validar)
+        </script>
+
+<footer> 
+    <div class="container__footer">
+        <div class="box__footer">
+           <div class="logo2">
+               <img src="img/faviconnn.png" alt="">
+           </div>
+           <div class="terms">
+               <p class="centrado pfooter"> "No se puede esperar que se queme una casa para comprar un seguro contra incendio. No podemos esperar hasta que haya dislocaciones masivas en nuestra sociedad para prepararnos para la Cuarta Revolución Industrial"</p>
+               <p class="negritacursiva pfooter">
+                Robert J. Shiller
+               </p>
+           </div>
+        </div>
+        <div class="box__footer">
+           <h2>Soluciones</h2>
+           <a href="https://www.google.com">App Desarrollo</a>
+           <a href="#">App Marketing</a>
+           <a href="#">IOS Desarrollo</a>
+           <a href="#">Android Desarrollo</a>
+        </div>
+
+        <div class="box__footer">
+           <h2>Compañia</h2>
+           <a href="#">Acerca de</a>
+           <a href="#">Trabajos</a>
+           <a href="#">Procesos</a>
+           <a href="#">Servicios</a>              
+        </div>
+
+        <div class="box__footer">
+           <h2>Redes Sociales</h2>
+           <a href="https://www.linkedin.com/in/ignacio-heredia-a40663213"> <i class="fab fa-linkedin"></i> Nacho</a>
+           <a href="#"><i class="fab fa-linkedin"></i> Nicolas</a>
+           <a href="https://www.linkedin.com/in/walter-fernandez-6351188a/" target="_blank"><i class="fab fa-linkedin"></i> Walter</a>
+           <a href="https://www.instagram.com/programacodoacodo/?hl=es" target="_blank"><i class="fab fa-instagram-square"></i> Instagram</a>
+        </div>
+      </div>
+
+   <div class="box__copyright">
+       <hr>
+       <p>Todos los derechos reservados © 2022 <b>Codo a Codo</b></p>
+   </div>
+  </footer>
+    </body>
+    </html>
